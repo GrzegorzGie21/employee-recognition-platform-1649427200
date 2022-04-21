@@ -8,5 +8,7 @@ class CreateKudos < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+    change_column_null :kudos, :title, false
+    change_column_null :kudos, :content, false
   end
 end
