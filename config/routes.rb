@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   resources :kudos
-  root 'home#index'
+  root 'kudos#index'
 
   devise_for :employees
 
