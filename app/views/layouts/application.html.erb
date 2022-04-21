@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Employee Recognition Platform</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Employee Recognition Platform</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_pack_tag 'application' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+<nav class="navbar">
+  <ul class="nav-links">
+    <li>
+      <%= link_to image_tag('logo.webp', size: 30), root_path %>
+    </li>
+    <% if !employee_signed_in? %>
+      <li id="emp">
+        <%= link_to 'Sign In', new_employee_session_path %>
+      </li>
+      <li id="emp">
+        <%= link_to 'Sign Up', new_employee_registration_path %>
+      </li>
+    <% else %>
+      <li id="emp">
+        <%= link_to 'Sign Out', destroy_employee_session_path, method: :delete %>
+      </li>
+    <% end %>
+
+  </ul>
+</nav>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= yield %>
+</body>
 </html>
