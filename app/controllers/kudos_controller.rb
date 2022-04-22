@@ -25,7 +25,7 @@ class KudosController < ApplicationController
     @kudo.giver = current_employee
 
     if @kudo.save
-      redirect_to @kudo, notice: 'Kudo was successfully created.'
+      redirect_to kudos_path, notice: 'Kudo was successfully created.'
     else
       render :new
     end
