@@ -19,6 +19,7 @@
   <strong>Reciver:</strong>
   <%= @kudo.receiver_id %>
 </p>
-
-<button><%= link_to 'Edit', edit_kudo_path(@kudo) %></button> |
+<% if current_employee.id == @kudo.giver.id %>
+  <button><%= link_to 'Edit', edit_kudo_path(@kudo) %></button> |
+<% end %>
 <button><%= link_to 'Back', kudos_path %></button>
