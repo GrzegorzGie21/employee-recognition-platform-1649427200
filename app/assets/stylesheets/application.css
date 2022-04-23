@@ -46,6 +46,15 @@ th {
     color: white;
 }
 
+#action a {
+    text-decoration: none;
+    color: lightcoral;
+}
+
+#action a:hover {
+    background-color: white;
+}
+
 td {
     padding: 10px;
     text-align: left;
@@ -56,6 +65,13 @@ td {
     background-color: #fad9de;
 }
 
+button {
+    background-color: mediumpurple;
+    border-radius: 5px;
+}
+
 button a{
     text-decoration: none;
+    color: white;
 }
+
