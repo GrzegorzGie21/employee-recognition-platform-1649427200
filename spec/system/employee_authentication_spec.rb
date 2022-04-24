@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Authentication process', type: :system do
-
   # Employee.create(email: 'test1@email.com', password: 'secret')
   let(:employee) { build :employee }
 
@@ -22,5 +21,4 @@ RSpec.describe 'Authentication process', type: :system do
     click_button 'Log in'
     expect(page).to have_content 'Signed in successfully.'
   end
-
 end
