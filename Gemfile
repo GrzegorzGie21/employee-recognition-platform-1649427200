@@ -22,7 +22,6 @@ gem 'net-imap'
 gem 'net-pop'
 gem 'net-smtp'
 
-
 group :development, :test do
   # Debugging tool
   gem 'pry-rails'
